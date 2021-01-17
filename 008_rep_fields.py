@@ -1,8 +1,13 @@
 age = 24
+name = "Tim"
 # str() parses int to string
 print("My age is " + str(age) + " years")
 # replaces {0} to age
 print("My age is {0} years".format(age))
+# using printf version
+print("My age is %d years old" % age)
+# just like string template literal in JS. No need to use .format(value) function
+print(name + f"'s age is {age} years old")
 # should always starts with {0}
 print("There are {0} days in {1}, {2}, {3}, {4}, {5}, {6}, and {7}"
      .format(31, "Jan", "Mar", "May", "Jul", "Aug", "Oct", "Dec"))
