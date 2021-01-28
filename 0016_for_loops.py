@@ -1,6 +1,6 @@
 parrot = 'Norwegian Blue'
 
-for character in parrot:
+for character in parrot:    # any iterable/sequential objects can be looped
     print(character)
 # prints
 # N
