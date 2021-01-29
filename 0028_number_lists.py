@@ -25,3 +25,24 @@ print(even)
 even.sort(reverse=True) 
 print(even)
 print(another_even)
+
+
+empty_list = []
+even = [2, 4, 6, 8]
+odd = [1, 3, 5, 7, 9]
+
+numbers = even + odd
+print(numbers)
+
+sorted_numbers = sorted(numbers)
+print(sorted_numbers)
+
+digits = list("432985617")  # creates a list from any iterable
+print(digits)
+
+more_numbers = list(numbers)
+# more_numbers = numbers[:]       # copies the list of numbers
+# more_numbers = numbers.copy()   # copies the list of numbers
+print(more_numbers)
+print(numbers is more_numbers)  # do they refer to the same copy of object
+print(numbers == more_numbers)  # do they have the same value
