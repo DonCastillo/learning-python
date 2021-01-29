@@ -6,4 +6,4 @@ for number in numbers:
         print('The numbers are unacceptable')
         break
 else:
-    print('All those numbers are fine')
+    print('All those numbers are fine') # execute this statement when the loop terminates normally
