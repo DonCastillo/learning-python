@@ -1,6 +1,15 @@
 
 
 def banner_text(text: str = " ", screen_width: int = 25) -> None:   # param with default value
+    """prints a banner text with limited width
+
+    :param text: text to display in the banner, defaults to " "
+    :type text: str, optional
+    :param screen_width: width of the banner, defaults to 25
+    :type screen_width: int, optional
+    :raises ValueError: if the length of the `text` is longer than
+        the `screen_width`
+    """
     if len(text) > screen_width - 4:
         raise ValueError("String {0} is larger than the specified width {1}"
                          .format(text, screen_width))   # like throwing an error in C++
