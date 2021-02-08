@@ -28,15 +28,35 @@ print(fruit)
 
 # print(fruit["tomato"])  # error. tomato does not exist in the dictionary
 print()
-while True:
-    dict_key = input("Please enter a fruit: ")
-    if dict_key == "quit":
-        break
-    if dict_key in fruit:
-        description = fruit.get(dict_key)
-        print(description)
-    else:
-        print("We don't have a " + dict_key)
-    # retrives the value based on the key entered. 
-    # like accessing through fruit["orange"]
-    # print(description)
+# while True:
+#     dict_key = input("Please enter a fruit: ")
+#     if dict_key == "quit":
+#         break
+#     # description = fruit.get(dict_key, "We don't have a "+ dict_key) # like a ternary
+#     # fruit.has_key(dict_key) # alternative to "if dict_key in"
+#     # print(description)
+#     if dict_key in fruit:
+#         description = fruit.get(dict_key)
+#         print(description)
+#     else:
+#         print("We don't have a " + dict_key)
+#     # retrives the value based on the key entered. 
+#     # like accessing through fruit["orange"]
+#     # print(description)
+
+# for snack in fruit:
+#     print(fruit[snack])
+
+# for i in range(10):
+#     for snack in fruit:
+#         print(snack + " is " + fruit[snack])
+#     print('-' * 40)
+
+ordered_keys = sorted(list(fruit.keys()))
+# ordered_keys.sort() # sorts the keys in place
+for f in ordered_keys:
+    print(f + " - " + fruit[f]) 
+# print(ordered_keys)
+print()
+for f in sorted(list(fruit.keys())):
+    print(f + " - " + fruit[f]) 
