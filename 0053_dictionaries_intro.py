@@ -7,6 +7,19 @@ fruit = {
     "apple": "round and crunchy" # replaces value of the first apple
 } # format just like JSON, can access value via key in string format
 
+# fruit.keys()   = dict_keys(['orange', 
+#                             'apple', 
+#                             'lemon', 
+#                             'grape', 
+#                             'lime', 
+#                             'apple'])
+# fruit.values() = dict_values(['a sweet, orange, citrus fruit', 
+#                               'good for making cider', 
+#                               'a sour, yellow citrus fruit', 
+#                               'a small, sweet fruit growing in bunches', 
+#                               'a sour, green citrus fruit', 
+#                               'round and crunchy'])
+
 print(fruit)
 print()
 print(fruit["orange"])
@@ -60,3 +73,29 @@ for f in ordered_keys:
 print()
 for f in sorted(list(fruit.keys())):
     print(f + " - " + fruit[f]) 
+
+print()
+for val in fruit.values():
+    print(val)
+
+print()
+for val in fruit.values():
+    print(val)
+print('-' * 40)
+
+print()
+for key in fruit.keys():
+    print(key)
+
+fruit["tomato"] = "not nice with ice cream"
+print(tuple(fruit.keys()))
+print('*' * 40)
+print(tuple(fruit.items()))
+print('*' * 40)
+
+for snack in tuple(fruit.items()):
+    item, description = snack
+    print(item + " is " + description)
+
+print('*' * 40)
+print(dict(tuple(fruit.items())))
